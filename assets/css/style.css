@@ -1,15 +1,28 @@
-body{
+body {
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #292727;
+    font-family: "Ubuntu", sans-serif;
 }
 
-#gameBoard{
+.generalDiv {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#gameBoard {
     background-color: #232323;
     display: grid;
-    grid-template-columns: 6rem 6rem 6rem;
-    grid-template-rows: 6rem 6rem 6rem;
+    grid-template-columns: repeat(3, 6rem);
+    grid-template-rows: repeat(3, 6rem);
     gap: .5rem;
-    margin-bottom: 1.5rem;
     max-width: 19rem;
+    margin-top: 2rem;
 }
 
 #gameBoard span {
@@ -20,10 +33,81 @@ body{
     font-size: 5rem;
 }
 
-#gameBoard span.win{
+#gameBoard span.win {
     background-color: #25a340;
 }
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+h1{
+    color: #4732be;
+    text-shadow: 1px 1px #4732be;
+}
+
+label{
+    color: #fff;
+    font: 600;
+    font-size: 20px;
+}
+
+.generalDiv label,
+.generalDiv input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px; 
+    width: 100%; 
+}
+
+h2{
+    color: #fff;
+}
+
+input {
+    color: #fff;
+    font-size: 28px;
+    width: 100%;
+    padding: 20px 5px 5px;
+    background-color: #4f4f4f;
+    border: none;
+    border-radius: 4px;
+  }
+
+  input:focus {
+    box-shadow: rgba(255, 255, 255, 0.19) 0px 10px 20px, rgba(255, 255, 255, 0.23) 0px 6px 6px;
+    transition: 0.3s;
+}
+
+.button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
+}
+.button--start {
+    background-color: #25a340;
+    color: #fff;
+}
+
+.button--start:hover {
+    background-color: #228e3a;
+    box-shadow: rgba(34, 142, 58, 0.19) 0px 10px 20px, rgba(34, 142, 58, 0.23) 0px 6px 6px;
+    transition: 0.4s;
+}
+
+.button--start:active{
+    transform: scale(0.7);
+    transition: .3s;
+}
+
+@media screen and (max-width: 390px){
+    #gameBoard{
+        padding-bottom: 4rem;
+    }
 }
