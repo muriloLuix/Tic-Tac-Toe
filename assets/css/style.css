@@ -10,6 +10,13 @@ body {
     font-family: "Ubuntu", sans-serif;
 }
 
+:root {
+    --bg-color: #212529;
+    --border-color: #666;
+    --font-color: #f1f5f9;
+    --primary-color: #4dff91;
+    --error-color: #ff0043;
+  }
 .generalDiv {
     text-align: center;
     margin-top: 20px;
@@ -106,8 +113,22 @@ input {
     transition: .3s;
 }
 
+#themeSwitcher {
+    background-color: var(--bg-color);
+    border: .125rem solid var(--font-color);
+    color: var(--font-color);
+  }
+  
+  #themeSwitcher:hover {
+    background-color: var(--font-color);
+    color: var(--bg-color);
+  }
+
 @media screen and (max-width: 390px){
     #gameBoard{
         padding-bottom: 4rem;
     }
+    input {
+        width: 70%;
+      }
 }
